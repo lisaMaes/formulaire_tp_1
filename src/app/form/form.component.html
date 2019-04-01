@@ -1,0 +1,14 @@
+<h4>Formulaire: typescript</h4>
+<form (ngSubmit)="handleSubmit()" [formGroup]="userForm">
+  <div>
+    <label>Email: </label>
+    <input formControlName="email">
+  </div>
+  <div>
+    <label>Password: </label>
+    <input type="password"
+           formControlName="password">
+  </div>
+  <button type="submit">Login</button>
+  <button type="reset" (click)="handleClear()">Clear</button>
+</form>
