@@ -1,0 +1,18 @@
+.input-angular {
+  background-color: rgba(205, 208, 214, 0.56);
+  color: #3e3c3c;
+}
+.input-angular.ng-invalid.ng-dirty {
+  border: 2px red solid;
+  border-radius: 2px;
+}
+
+.input-pass.ng-invalid.ng-dirty {
+  border: 2px red dotted;
+  border-radius: 2px;
+}
+
+.input-pass.ng-dirty.ng-valid {
+  border: 2px palegreen dotted;
+  border-radius: 2px;
+}

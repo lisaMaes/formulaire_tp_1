@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {isPrefixNartawakValidator} from "../validators";
+import {User} from "../model/User";
 
 @Component({
   selector: 'app-form',
@@ -12,6 +13,8 @@ export class FormComponent implements OnInit {
   emailCtrl: FormControl;
   passwordCtrl: FormControl;
   userForm: FormGroup;
+
+  user: User = new User('Nartawak', 'test');
 
   constructor(fb: FormBuilder) {
 
