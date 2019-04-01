@@ -2,13 +2,16 @@
   <div>
     <label>Email: </label>
     <input name="email"
-           ngModel>
+           [ngModel] = "user.email"
+            (ngModelChange)="user.email = $event">
   </div>
+  <!--synthaxe courte-->
+
   <div>
     <label>Password: </label>
     <input type="password"
            name="password"
-           ngModel>
+           [(ngModel)] = "user.password">
   </div>
   <button type="submit">Login</button>
 </form>
