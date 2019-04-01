@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
+import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import {isPrefixNartawakValidator} from "../validators";
 
 @Component({
   selector: 'app-form',
@@ -15,8 +16,8 @@ export class FormComponent implements OnInit {
   constructor(fb: FormBuilder) {
 
   // Création des contrôles
-    this.emailCtrl = fb.control('');
-    this.passwordCtrl = fb.control('');
+    this.emailCtrl = fb.control('', [Validators.email, Validators.required]);
+    this.passwordCtrl = fb.control('', [isPrefixNartawakValidator]);
 
     // Création du groupe (aka le formulaire)
     this.userForm = fb.group({
